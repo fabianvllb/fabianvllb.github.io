@@ -32,14 +32,14 @@
       <div class="space-y-5">
         <p class="text-xl underline">Education</p>
         <div class="flex flex-row items-center">
-          <img class="w-36 mr-2" src="public\images\upm_leyenda.png" alt=""/>
+          <img class="w-36 mr-2" src="/images/upm_leyenda.png" alt=""/>
           <div>
             <p >Master's Degree in Computer Science</p>
             <p class=" text-[#9cc2ff]">Polytechnic University of Madrid (Spain)</p>
           </div>
         </div>
         <div class="flex flex-row items-center">
-          <img class="w-32 mr-6" src="public\images\logo-usal-white.png" alt=""/>
+          <img class="w-32 mr-6" src="/images/logo-usal-white.png" alt=""/>
           <div>
             <p >Bachelor's Degree in Computer Science</p>
           <p class=" text-[#ffa0a0]">University of Salamanca (Spain)</p>
