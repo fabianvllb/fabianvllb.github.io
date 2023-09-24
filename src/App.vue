@@ -138,15 +138,17 @@
             <div class=" w-[80%]">
               <p>Programming languages I know: (Starting from those that I like the most!)</p>
               <ul class="pl-10 list-disc  columns-3">
+                <li>C++ 🔥</li>
+                <li>C 🔥</li>
+                <li>C# 🔥</li>
                 <li>Javascript 🔥</li>
                 <li>Java 🔥</li>
-                <li>C</li>
-                <li>C#</li>
-                <li>C++</li>
                 <li>Objective-C</li>
                 <li>R</li>
                 <li>Python</li>
                 <li>SQL</li>
+                <li>Go</li>
+                <li>Kotlin</li>
                 <li>Perl</li>
                 <li>PHP</li>  
                 <li>Ada</li>
@@ -157,11 +159,12 @@
             <div class=" w-[54%]">
               <p>Software, IDEs, etc:</p>
               <ul class="pl-10 list-disc columns-2">
-                <li>Visual Studio Code</li>
-                <li>Unity</li>
-                <li>Unreal Engine</li>
+                <li>Unity 🔥</li>
+                <li>Unreal Engine 🔥</li>
+                <li>Git 🔥</li>
                 <li>MS Project</li>
-                <li>Git</li>
+                <li>Visual Studio</li>
+                <li>Visual Studio Code</li>
                 <li>Jira</li>
                 <li>Taiga</li>
                 <li>Jenkins</li>
@@ -175,8 +178,8 @@
                 <p>Languages:</p>
                 <ul class="pl-10 list-disc">
                   <li>Spanish - Native</li>
-                  <li>French - Fluent</li>
-                  <li>English - Fluent</li>
+                  <li>French - Fluent (C1)</li>
+                  <li>English - Fluent (C1)</li>
                 </ul>
               </div>
             </div>

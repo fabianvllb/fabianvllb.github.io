@@ -10,7 +10,7 @@
       <div class="flex flex-row space-x-10 py-5">
         <div class="space-x-2 hover:text-[#95B2B0]">
           <font-awesome-icon icon="fa-brands fa-github" />
-          <a href="https://github.com/Fabianvc88" target="_blank">GitHub</a>
+          <a href="https://github.com/fabianvllb" target="_blank">GitHub</a>
         </div>
         <div class="space-x-2 hover:text-[#95B2B0]">
           <font-awesome-icon icon="fa-brands fa-linkedin" />
