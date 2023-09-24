@@ -1,0 +1,17 @@
+To update and redeploy the application, run the following commands:
+
+```bash
+#Remove the old gh-pages branch
+git push origin --delete gh-pages
+
+#Rebuild the application
+npm run build
+
+#Push new changes to the gh-pages branch
+git subtree push --prefix dist origin gh-pages
+
+#Push the new changes to the master branch
+git push origin master
+
+#Go to the github repository -> settings -> pages and change the source to gh-pages
+```
