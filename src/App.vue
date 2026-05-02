@@ -316,7 +316,7 @@ const personalProjects = [
     <main class="min-w-0 flex-1 space-y-12">
       <!-- About -->
       <section class="space-y-4">
-        <h1 class="text-3xl font-bold tracking-tight">Welcome! I'm Fabian.</h1>
+        <h1 class="text-3xl font-bold tracking-tight">Welcome. I'm Fabian.</h1>
         <p class="text-[#9ca3af]">
           AI Software Engineer ·
           <span class="text-white">📍 Barcelona, Spain</span>
@@ -347,38 +347,120 @@ const personalProjects = [
           Education
         </h2>
         <div class="space-y-3">
+          <!-- Master's -->
           <div
-            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#9cc2ff]"
+            class="rounded-lg border-l-4 border-[#9cc2ff] bg-[#363636] overflow-hidden"
           >
-            <div class="w-32 shrink-0 flex items-center justify-center">
-              <img
-                class="max-w-full max-h-14 object-contain"
-                src="/images/upm_leyenda.png"
-                alt="Polytechnic University of Madrid"
-              />
-            </div>
-            <div>
-              <p class="font-semibold">Master's Degree in Computer Science</p>
-              <p class="text-[#9cc2ff] text-sm mt-0.5">
-                Polytechnic University of Madrid · Spain
+            <button
+              @click="isMasterCoursesVisible = !isMasterCoursesVisible"
+              class="w-full flex items-center gap-5 p-4 text-left hover:bg-[#3f3f3f] transition-colors cursor-pointer"
+            >
+              <div class="w-32 shrink-0 flex items-center justify-center">
+                <img
+                  class="max-w-full max-h-14 object-contain"
+                  src="/images/upm_leyenda.png"
+                  alt="Polytechnic University of Madrid"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="font-semibold">Master's Degree in Computer Science</p>
+                <p class="text-[#9cc2ff] text-sm mt-0.5">
+                  Polytechnic University of Madrid · Spain
+                </p>
+              </div>
+              <span class="text-[#9ca3af] text-xs shrink-0 pr-1"
+                >{{ isMasterCoursesVisible ? "▲" : "▼" }} courses</span
+              >
+            </button>
+            <div
+              v-if="isMasterCoursesVisible"
+              class="border-t border-[#474747] px-6 pb-4 pt-3"
+            >
+              <p
+                class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
+              >
+                Coursework
               </p>
+              <ul
+                class="list-disc pl-5 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
+              >
+                <li>Data Processes</li>
+                <li>Advanced Intelligent Systems</li>
+                <li>Intelligent Data Analysis</li>
+                <li>Interactive Systems</li>
+                <li>Embedded and Ubiquitous Systems</li>
+                <li>Advanced Concepts of Software Engineering</li>
+                <li>Emerging Technologies for Business</li>
+                <li>Strategic Planning</li>
+                <li>Project Management</li>
+                <li>Quality Assurance & Information Security</li>
+                <li>Computer Graphics</li>
+                <li>Design & Security of Computer Networks</li>
+                <li>Advanced Operating Systems</li>
+                <li>Scientific Computing</li>
+              </ul>
             </div>
           </div>
+          <!-- Bachelor's -->
           <div
-            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ffa0a0]"
+            class="rounded-lg border-l-4 border-[#ffa0a0] bg-[#363636] overflow-hidden"
           >
-            <div class="w-32 shrink-0 flex items-center justify-center">
-              <img
-                class="max-w-full max-h-14 object-contain"
-                src="/images/logo-usal-white.png"
-                alt="University of Salamanca"
-              />
-            </div>
-            <div>
-              <p class="font-semibold">Bachelor's Degree in Computer Science</p>
-              <p class="text-[#ffa0a0] text-sm mt-0.5">
-                University of Salamanca · Spain
+            <button
+              @click="isBachelorCoursesVisible = !isBachelorCoursesVisible"
+              class="w-full flex items-center gap-5 p-4 text-left hover:bg-[#3f3f3f] transition-colors cursor-pointer"
+            >
+              <div class="w-32 shrink-0 flex items-center justify-center">
+                <img
+                  class="max-w-full max-h-14 object-contain"
+                  src="/images/logo-usal-white.png"
+                  alt="University of Salamanca"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="font-semibold">
+                  Bachelor's Degree in Computer Science
+                </p>
+                <p class="text-[#ffa0a0] text-sm mt-0.5">
+                  University of Salamanca · Spain
+                </p>
+              </div>
+              <span class="text-[#9ca3af] text-xs shrink-0 pr-1"
+                >{{ isBachelorCoursesVisible ? "▲" : "▼" }} courses</span
+              >
+            </button>
+            <div
+              v-if="isBachelorCoursesVisible"
+              class="border-t border-[#474747] px-6 pb-4 pt-3"
+            >
+              <p
+                class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
+              >
+                Coursework
               </p>
+              <ul
+                class="list-disc pl-5 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
+              >
+                <li>Programming I, II & III</li>
+                <li>Advanced Programming</li>
+                <li>Data Structures and Algorithms I & II</li>
+                <li>Computer Structures I & II</li>
+                <li>Computer Architecture</li>
+                <li>Operating Systems I & II</li>
+                <li>Computer Networks I & II</li>
+                <li>Systems Administration</li>
+                <li>Computer Systems Security</li>
+                <li>Information Theory & Encryption</li>
+                <li>Database Design</li>
+                <li>Database Systems</li>
+                <li>Graphical Interfaces Design</li>
+                <li>Human-Computer Interaction</li>
+                <li>Software Engineering I & II</li>
+                <li>Software Project Management</li>
+                <li>Intelligent Systems</li>
+                <li>Distributed Systems</li>
+                <li>Digital Animation</li>
+                <li>Modeling and Simulation of Systems</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -396,18 +478,18 @@ const personalProjects = [
         </h2>
         <div class="space-y-3">
           <div
-            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ff355e]"
+            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ff4f73]"
           >
             <div class="w-32 shrink-0 flex items-center justify-center">
               <div
-                class="w-12 h-12 rounded-lg bg-[#1a2e22] flex items-center justify-center text-[#ff355e] font-bold text-lg"
+                class="w-12 h-12 rounded-lg bg-[#1a2e22] flex items-center justify-center text-[#ff4f73] font-bold text-lg"
               >
                 F
               </div>
             </div>
             <div>
               <p class="font-semibold">AI Software Engineer</p>
-              <p class="text-[#ff355e] text-sm mt-0.5">
+              <p class="text-[#ff4f73] text-sm mt-0.5">
                 Factorial · Apr 2025 – Present
               </p>
               <p class="text-[#6b7280] text-xs mt-0.5">📍 Barcelona, Spain</p>
@@ -467,84 +549,6 @@ const personalProjects = [
               <p class="text-[#6b7280] text-xs mt-0.5">📍 Salamanca, Spain</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <hr class="border-[#474747]" />
-
-      <!-- Coursework -->
-      <section class="space-y-3">
-        <h2 class="text-xl font-semibold flex items-center gap-3">
-          <span
-            class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
-          ></span>
-          CS & Engineering Coursework
-        </h2>
-        <div class="rounded-lg border border-[#474747] overflow-hidden">
-          <button
-            @click="isBachelorCoursesVisible = !isBachelorCoursesVisible"
-            class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-[#363636] transition-colors cursor-pointer"
-          >
-            <span class="font-medium">Bachelor's Degree Courses</span>
-            <span class="text-[#9ca3af] text-xs">{{
-              isBachelorCoursesVisible ? "▲ hide" : "▼ show"
-            }}</span>
-          </button>
-          <ul
-            v-if="isBachelorCoursesVisible"
-            class="list-disc px-10 pb-4 pt-2 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
-          >
-            <li>Programming I, II & III</li>
-            <li>Advanced Programming</li>
-            <li>Data Structures and Algorithms I & II</li>
-            <li>Computer Structures I & II</li>
-            <li>Computer Architecture</li>
-            <li>Operating Systems I & II</li>
-            <li>Computer Networks I & II</li>
-            <li>Systems Administration</li>
-            <li>Computer Systems Security</li>
-            <li>Information Theory & Encryption</li>
-            <li>Database Design</li>
-            <li>Database Systems</li>
-            <li>Graphical Interfaces Design</li>
-            <li>Human-Computer Interaction</li>
-            <li>Software Engineering I & II</li>
-            <li>Software Project Management</li>
-            <li>Intelligent Systems</li>
-            <li>Distributed Systems</li>
-            <li>Digital Animation</li>
-            <li>Modeling and Simulation of Systems</li>
-          </ul>
-        </div>
-        <div class="rounded-lg border border-[#474747] overflow-hidden">
-          <button
-            @click="isMasterCoursesVisible = !isMasterCoursesVisible"
-            class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-[#363636] transition-colors cursor-pointer"
-          >
-            <span class="font-medium">Master's Degree Courses</span>
-            <span class="text-[#9ca3af] text-xs">{{
-              isMasterCoursesVisible ? "▲ hide" : "▼ show"
-            }}</span>
-          </button>
-          <ul
-            v-if="isMasterCoursesVisible"
-            class="list-disc px-10 pb-4 pt-2 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
-          >
-            <li>Data Processes</li>
-            <li>Advanced Intelligent Systems</li>
-            <li>Intelligent Data Analysis</li>
-            <li>Interactive Systems</li>
-            <li>Embedded and Ubiquitous Systems</li>
-            <li>Advanced Concepts of Software Engineering</li>
-            <li>Emerging Technologies for Business</li>
-            <li>Strategic Planning</li>
-            <li>Project Management</li>
-            <li>Quality Assurance & Information Security</li>
-            <li>Computer Graphics</li>
-            <li>Design & Security of Computer Networks</li>
-            <li>Advanced Operating Systems</li>
-            <li>Scientific Computing</li>
-          </ul>
         </div>
       </section>
 
