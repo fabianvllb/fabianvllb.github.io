@@ -28,12 +28,148 @@ const tools = [
   { name: "Unity", hot: true },
   { name: "Unreal Engine", hot: true },
   { name: "Git", hot: true },
+  { name: "Docker", hot: true },
+  { name: "Terraform", hot: false },
   { name: "Visual Studio Code", hot: false },
   { name: "Visual Studio", hot: false },
   { name: "MS Project", hot: false },
   { name: "Jira", hot: false },
   { name: "Taiga", hot: false },
   { name: "Jenkins", hot: false },
+];
+
+const professionalProjects = [
+  {
+    category: "AI & Machine Learning",
+    items: [
+      {
+        name: "AI Chatbot with RAG",
+        org: "Factorial",
+        desc: "Intelligent chatbot powered by a retrieval-augmented generation (RAG) system, including ingestion pipelines, filtering, and data transformations.",
+        tech: ["Python", "LangChain", "ElasticSearch", "Azure", "Docker"],
+      },
+      {
+        name: "AI Micro-services",
+        org: "Factorial",
+        desc: "Intelligent micro-services for automated data summarization and content generation, shipped with CI/CD pipelines, metrics capture, and visualization dashboards.",
+        tech: ["Python", "AWS", "Azure", "Docker"],
+      },
+      {
+        name: "XAI Facial Recognition Evaluation",
+        org: "IDENTY",
+        desc: "System to evaluate facial recognition CNN models using Model Explainability (XAI) techniques, identifying training biases and undesired learning patterns. Accompanied by a scientific whitepaper.",
+        tech: ["Python", "TensorFlow", "Pandas"],
+      },
+    ],
+  },
+  {
+    category: "Data Engineering",
+    items: [
+      {
+        name: "Data Engineering Pipelines",
+        org: "Factorial",
+        desc: "Large-scale data cleaning, processing, and restoration workflows ensuring data quality and consistency across distributed systems.",
+        tech: ["Python", "SQL", "AWS", "Terraform"],
+      },
+    ],
+  },
+  {
+    category: "Backend & Integration",
+    items: [
+      {
+        name: "Workflow Automations & Integrations",
+        org: "Factorial",
+        desc: "Complex workflow automations and custom integrations to synchronize data between internal storage systems and external services.",
+        tech: ["Python", "Slack API", "HubSpot API", "Docker"],
+      },
+      {
+        name: "City Route Finder",
+        org: "BISITE",
+        desc: "Full-stack web application for Salamanca's public transport system, computing and displaying shortest routes between any two city locations.",
+        tech: ["React", "Node", "Express", "MongoDB", "PostgreSQL"],
+      },
+    ],
+  },
+  {
+    category: "Testing & QA",
+    items: [
+      {
+        name: "Web SDK Automated Test Suite",
+        org: "IDENTY",
+        desc: "200+ automated tests for proprietary web SDKs covering UI rendering, data flows, and edge cases. CI/CD pipelines configured for automated deployment.",
+        tech: ["JavaScript", "TypeScript", "Docker", "Bitbucket"],
+      },
+      {
+        name: "Telecom Web Test Automation",
+        org: "NTT Data",
+        desc: "100+ unit tests for Orange and Vodafone websites, covering data transfer, UI rendering, and navigation with full backend API integration.",
+        tech: ["Java", "Selenium", "Jenkins", "Jira"],
+      },
+    ],
+  },
+];
+
+const personalProjects = [
+  {
+    category: "Web Apps",
+    items: [
+      {
+        name: "IRPF Tax Calculator",
+        desc: "Web app to calculate Spanish personal income tax (IRPF) declarations. Includes a FIFO engine to compute capital gains and losses from long-term investments, stock trading, and cryptocurrency trading across multiple platforms.",
+        tech: ["Python", "Flask"],
+      },
+      {
+        name: "2Code",
+        desc: "Web app for solving programming exercises with multi-language compile & test at a remote server.",
+        tech: ["React", "Node", "PostgreSQL"],
+      },
+      {
+        name: "Virtual Ledgers",
+        desc: "Shortest path algorithms rendered over interactive city maps.",
+        tech: ["React", "Leaflet", "Node", "PostGIS"],
+      },
+      {
+        name: "Personal Webpage",
+        desc: "This website.",
+        tech: ["Vue", "Tailwind CSS"],
+      },
+    ],
+  },
+  {
+    category: "Videogames",
+    items: [
+      {
+        name: "Pirate Bomb",
+        desc: "2D pirate-themed game.",
+        tech: ["Unity", "C#"],
+      },
+      {
+        name: "Pokemon Catch",
+        desc: "Two-player 2D arcade game for Windows and macOS.",
+        tech: ["C# + WPF", "Objective-C", "Cocoa"],
+      },
+      {
+        name: "Meteorite Run",
+        desc: "3D game.",
+        tech: ["Unreal Engine 4"],
+      },
+    ],
+  },
+  {
+    category: "Other",
+    items: [
+      {
+        name: "City Tour Planner",
+        desc: "Java agents-based simulator for creating and managing tourism routes.",
+        tech: ["Java"],
+      },
+      {
+        name: "Spotify Clone",
+        desc: "Console-based music library manager.",
+        tech: ["Java"],
+      },
+    ],
+  },
 ];
 </script>
 
@@ -276,7 +412,7 @@ const tools = [
     <hr class="border-[#474747]" />
 
     <!-- Projects -->
-    <section id="projects" class="space-y-5">
+    <section id="projects" class="space-y-8">
       <h2 class="text-xl font-semibold flex items-center gap-3">
         <span
           class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
@@ -284,128 +420,74 @@ const tools = [
         Projects
       </h2>
 
-      <div>
+      <!-- Professional Projects -->
+      <div class="space-y-6">
         <p
-          class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
+          class="text-sm font-semibold text-white border-b border-[#474747] pb-2"
         >
-          Videogames
+          Professional
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <div
-            class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747]"
+        <div
+          v-for="group in professionalProjects"
+          :key="group.category"
+          class="space-y-3"
+        >
+          <p
+            class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold"
           >
-            <p class="font-semibold">Pirate Bomb 🔥</p>
-            <p class="text-sm text-[#9ca3af]">
-              2D pirate-themed game built with Unity and C#.
-            </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-badge">Unity</span>
-              <span class="tech-badge">C#</span>
-            </div>
-          </div>
-          <div
-            class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747]"
-          >
-            <p class="font-semibold">Pokemon Catch</p>
-            <p class="text-sm text-[#9ca3af]">
-              Two-player 2D arcade game for Windows and macOS.
-            </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-badge">C# + WPF</span>
-              <span class="tech-badge">Objective-C</span>
-              <span class="tech-badge">Cocoa</span>
-            </div>
-          </div>
-          <div
-            class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747]"
-          >
-            <p class="font-semibold">Meteorite Run</p>
-            <p class="text-sm text-[#9ca3af]">
-              3D game made with Unreal Engine 4.
-            </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-badge">Unreal Engine 4</span>
+            {{ group.category }}
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div
+              v-for="project in group.items"
+              :key="project.name"
+              class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747] flex flex-col"
+            >
+              <div>
+                <p class="font-semibold">{{ project.name }}</p>
+                <p class="text-xs text-[#6b7280] mt-0.5">{{ project.org }}</p>
+              </div>
+              <p class="text-sm text-[#9ca3af] grow">{{ project.desc }}</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span v-for="t in project.tech" :key="t" class="tech-badge">{{
+                  t
+                }}</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div>
+      <!-- Personal Projects -->
+      <div class="space-y-6">
         <p
-          class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
+          class="text-sm font-semibold text-white border-b border-[#474747] pb-2"
         >
-          Web Apps
+          Personal
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <div
-            class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747]"
-          >
-            <p class="font-semibold">2Code 🔥</p>
-            <p class="text-sm text-[#9ca3af]">
-              Web app for solving programming exercises with multi-language
-              compile & test at a remote server.
-            </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">Node</span>
-              <span class="tech-badge">PostgreSQL</span>
-            </div>
-          </div>
-          <div
-            class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747]"
-          >
-            <p class="font-semibold">Virtual Ledgers 🔥</p>
-            <p class="text-sm text-[#9ca3af]">
-              Shortest path algorithms rendered over interactive city maps.
-            </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">Leaflet</span>
-              <span class="tech-badge">Node</span>
-              <span class="tech-badge">PostGIS</span>
-            </div>
-          </div>
-          <div
-            class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747]"
-          >
-            <p class="font-semibold">Personal Webpage</p>
-            <p class="text-sm text-[#9ca3af]">This website.</p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-badge">Vue</span>
-              <span class="tech-badge">Tailwind CSS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <p
-          class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
+        <div
+          v-for="group in personalProjects"
+          :key="group.category"
+          class="space-y-3"
         >
-          Other Apps
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div
-            class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747]"
+          <p
+            class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold"
           >
-            <p class="font-semibold">City Tour Planner</p>
-            <p class="text-sm text-[#9ca3af]">
-              Java agents-based simulator for creating and managing tourism
-              routes.
-            </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-badge">Java</span>
-            </div>
-          </div>
-          <div
-            class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747]"
-          >
-            <p class="font-semibold">Spotify Clone</p>
-            <p class="text-sm text-[#9ca3af]">
-              Console-based music library manager.
-            </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <span class="tech-badge">Java</span>
+            {{ group.category }}
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div
+              v-for="project in group.items"
+              :key="project.name"
+              class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747] flex flex-col"
+            >
+              <p class="font-semibold">{{ project.name }}</p>
+              <p class="text-sm text-[#9ca3af] grow">{{ project.desc }}</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span v-for="t in project.tech" :key="t" class="tech-badge">{{
+                  t
+                }}</span>
+              </div>
             </div>
           </div>
         </div>
