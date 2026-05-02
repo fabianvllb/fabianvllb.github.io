@@ -38,6 +38,82 @@ const tools = [
   { name: "Jenkins", hot: false },
 ];
 
+const stack = [
+  {
+    domain: "AI / ML",
+    color: "#a5f3c0",
+    bg: "#1a2e22",
+    items: [
+      { name: "Python", level: "primary" },
+      { name: "LangChain", level: "primary" },
+      { name: "LangGraph", level: "primary" },
+      { name: "TensorFlow", level: "secondary" },
+      { name: "ElasticSearch", level: "primary" },
+      { name: "Pandas", level: "secondary" },
+    ],
+  },
+  {
+    domain: "Backend",
+    color: "#9cc2ff",
+    bg: "#1a2333",
+    items: [
+      { name: "Node.js", level: "primary" },
+      { name: "Flask", level: "secondary" },
+      { name: "Express", level: "primary" },
+      { name: "Go", level: "secondary" },
+      { name: "Java", level: "secondary" },
+      { name: "SQL", level: "primary" },
+    ],
+  },
+  {
+    domain: "Frontend",
+    color: "#c4b5fd",
+    bg: "#1e1a2e",
+    items: [
+      { name: "React", level: "primary" },
+      { name: "Vue", level: "primary" },
+      { name: "TypeScript", level: "primary" },
+      { name: "Tailwind CSS", level: "primary" },
+    ],
+  },
+  {
+    domain: "Infra / DevOps",
+    color: "#ffd6a5",
+    bg: "#2e2214",
+    items: [
+      { name: "Docker", level: "primary" },
+      { name: "AWS", level: "secondary" },
+      { name: "Azure", level: "primary" },
+      { name: "Terraform", level: "secondary" },
+      { name: "Git", level: "primary" },
+      { name: "GitHub Workflows", level: "primary" },
+      { name: "Jenkins", level: "secondary" },
+    ],
+  },
+  {
+    domain: "Testing / QA",
+    color: "#fca5a5",
+    bg: "#2e1a1a",
+    items: [
+      { name: "Jest", level: "primary" },
+      { name: "Jasmine", level: "secondary" },
+      { name: "Selenium", level: "secondary" },
+      { name: "GitHub CI", level: "primary" },
+      { name: "Bitbucket CI", level: "secondary" },
+    ],
+  },
+  {
+    domain: "Game Dev",
+    color: "#fdba74",
+    bg: "#2e1e12",
+    items: [
+      { name: "Unity", level: "secondary" },
+      { name: "Unreal Engine", level: "secondary" },
+      { name: "C#", level: "secondary" },
+    ],
+  },
+];
+
 const professionalProjects = [
   {
     category: "AI & Machine Learning",
@@ -175,398 +251,462 @@ const personalProjects = [
 
 <template>
   <Navbar />
-  <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
-    <!-- About -->
-    <section class="space-y-4">
-      <h1 class="text-3xl font-bold tracking-tight">Welcome! I'm Fabian.</h1>
-      <p class="text-[#9ca3af]">
-        AI Software Engineer ·
-        <span class="text-white">📍 Barcelona, Spain</span>
-      </p>
-      <p class="leading-relaxed text-[#d1d5db] text-justify">
-        I'm a software engineer specialized in AI and data science currently
-        working as an AI Software Engineer at Factorial, where I design and ship
-        AI-driven systems — from RAG-powered chatbots and LLM micro-services to
-        MLOps pipelines and large-scale data engineering workflows. I hold a
-        Master's Degree in Computer Science from the Polytechnic University of
-        Madrid and a Bachelor's from the University of Salamanca. Before
-        pivoting into applied AI, I built a strong foundation in full-stack web
-        development (React, Vue, Node, Next.js) and quality assurance
-        automation. Outside of work I enjoy game development, DevOps, and
-        picking up new languages — both programming and human ones. 😊
-      </p>
-    </section>
-
-    <hr class="border-[#474747]" />
-
-    <!-- Education -->
-    <section id="education" class="space-y-4">
-      <h2 class="text-xl font-semibold flex items-center gap-3">
-        <span
-          class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
-        ></span>
-        Education
-      </h2>
-      <div class="space-y-3">
-        <div
-          class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#9cc2ff]"
-        >
-          <div class="w-32 shrink-0 flex items-center justify-center">
-            <img
-              class="max-w-full max-h-14 object-contain"
-              src="/images/upm_leyenda.png"
-              alt="Polytechnic University of Madrid"
-            />
-          </div>
-          <div>
-            <p class="font-semibold">Master's Degree in Computer Science</p>
-            <p class="text-[#9cc2ff] text-sm mt-0.5">
-              Polytechnic University of Madrid · Spain
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ffa0a0]"
-        >
-          <div class="w-32 shrink-0 flex items-center justify-center">
-            <img
-              class="max-w-full max-h-14 object-contain"
-              src="/images/logo-usal-white.png"
-              alt="University of Salamanca"
-            />
-          </div>
-          <div>
-            <p class="font-semibold">Bachelor's Degree in Computer Science</p>
-            <p class="text-[#ffa0a0] text-sm mt-0.5">
-              University of Salamanca · Spain
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="border-[#474747]" />
-
-    <!-- Experience -->
-    <section id="experience" class="space-y-4">
-      <h2 class="text-xl font-semibold flex items-center gap-3">
-        <span
-          class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
-        ></span>
-        Work Experience
-      </h2>
-      <div class="space-y-3">
-        <div
-          class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ff355e]"
-        >
-          <div class="w-32 shrink-0 flex items-center justify-center">
-            <div
-              class="w-12 h-12 rounded-lg bg-[#1a2e22] flex items-center justify-center text-[#ff355e] font-bold text-lg"
-            >
-              F
-            </div>
-          </div>
-          <div>
-            <p class="font-semibold">AI Software Engineer</p>
-            <p class="text-[#ff355e] text-sm mt-0.5">
-              Factorial · Apr 2025 – Present
-            </p>
-            <p class="text-[#6b7280] text-xs mt-0.5">📍 Barcelona, Spain</p>
-          </div>
-        </div>
-        <div
-          class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#9cc2ff]"
-        >
-          <div class="w-32 shrink-0 flex items-center justify-center">
-            <div
-              class="w-12 h-12 rounded-lg bg-[#1a2333] flex items-center justify-center text-[#9cc2ff] font-bold text-lg"
-            >
-              I
-            </div>
-          </div>
-          <div>
-            <p class="font-semibold">Software Engineer</p>
-            <p class="text-[#9cc2ff] text-sm mt-0.5">
-              IDENTY Touchless ID · Feb 2024 – Dec 2024
-            </p>
-            <p class="text-[#6b7280] text-xs mt-0.5">📍 Madrid, Spain</p>
-          </div>
-        </div>
-        <div
-          class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ffd6a5]"
-        >
-          <div class="w-32 shrink-0 flex items-center justify-center">
-            <div
-              class="w-12 h-12 rounded-lg bg-[#2e2214] flex items-center justify-center text-[#ffd6a5] font-bold text-lg"
-            >
-              N
-            </div>
-          </div>
-          <div>
-            <p class="font-semibold">Software QA Engineer</p>
-            <p class="text-[#ffd6a5] text-sm mt-0.5">
-              NTT Data Europe & LATAM · Feb 2022 – Jun 2022
-            </p>
-            <p class="text-[#6b7280] text-xs mt-0.5">📍 Salamanca, Spain</p>
-          </div>
-        </div>
-        <div
-          class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ffa0a0]"
-        >
-          <div class="w-32 shrink-0 flex items-center justify-center">
-            <div
-              class="w-12 h-12 rounded-lg bg-[#1e1a2e] flex items-center justify-center text-[#ffa0a0] font-bold text-lg"
-            >
-              B
-            </div>
-          </div>
-          <div>
-            <p class="font-semibold">Software Engineer</p>
-            <p class="text-[#ffa0a0] text-sm mt-0.5">
-              BISITE Research Group · Feb 2021 – Jun 2021
-            </p>
-            <p class="text-[#6b7280] text-xs mt-0.5">📍 Salamanca, Spain</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="border-[#474747]" />
-
-    <!-- Coursework -->
-    <section class="space-y-3">
-      <h2 class="text-xl font-semibold flex items-center gap-3">
-        <span
-          class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
-        ></span>
-        CS & Engineering Coursework
-      </h2>
-      <div class="rounded-lg border border-[#474747] overflow-hidden">
-        <button
-          @click="isBachelorCoursesVisible = !isBachelorCoursesVisible"
-          class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-[#363636] transition-colors cursor-pointer"
-        >
-          <span class="font-medium">Bachelor's Degree Courses</span>
-          <span class="text-[#9ca3af] text-xs">{{
-            isBachelorCoursesVisible ? "▲ hide" : "▼ show"
-          }}</span>
-        </button>
-        <ul
-          v-if="isBachelorCoursesVisible"
-          class="list-disc px-10 pb-4 pt-2 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
-        >
-          <li>Programming I, II & III</li>
-          <li>Advanced Programming</li>
-          <li>Data Structures and Algorithms I & II</li>
-          <li>Computer Structures I & II</li>
-          <li>Computer Architecture</li>
-          <li>Operating Systems I & II</li>
-          <li>Computer Networks I & II</li>
-          <li>Systems Administration</li>
-          <li>Computer Systems Security</li>
-          <li>Information Theory & Encryption</li>
-          <li>Database Design</li>
-          <li>Database Systems</li>
-          <li>Graphical Interfaces Design</li>
-          <li>Human-Computer Interaction</li>
-          <li>Software Engineering I & II</li>
-          <li>Software Project Management</li>
-          <li>Intelligent Systems</li>
-          <li>Distributed Systems</li>
-          <li>Digital Animation</li>
-          <li>Modeling and Simulation of Systems</li>
-        </ul>
-      </div>
-      <div class="rounded-lg border border-[#474747] overflow-hidden">
-        <button
-          @click="isMasterCoursesVisible = !isMasterCoursesVisible"
-          class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-[#363636] transition-colors cursor-pointer"
-        >
-          <span class="font-medium">Master's Degree Courses</span>
-          <span class="text-[#9ca3af] text-xs">{{
-            isMasterCoursesVisible ? "▲ hide" : "▼ show"
-          }}</span>
-        </button>
-        <ul
-          v-if="isMasterCoursesVisible"
-          class="list-disc px-10 pb-4 pt-2 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
-        >
-          <li>Data Processes</li>
-          <li>Advanced Intelligent Systems</li>
-          <li>Intelligent Data Analysis</li>
-          <li>Interactive Systems</li>
-          <li>Embedded and Ubiquitous Systems</li>
-          <li>Advanced Concepts of Software Engineering</li>
-          <li>Emerging Technologies for Business</li>
-          <li>Strategic Planning</li>
-          <li>Project Management</li>
-          <li>Quality Assurance & Information Security</li>
-          <li>Computer Graphics</li>
-          <li>Design & Security of Computer Networks</li>
-          <li>Advanced Operating Systems</li>
-          <li>Scientific Computing</li>
-        </ul>
-      </div>
-    </section>
-
-    <hr class="border-[#474747]" />
-
-    <!-- Projects -->
-    <section id="projects" class="space-y-8">
-      <h2 class="text-xl font-semibold flex items-center gap-3">
-        <span
-          class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
-        ></span>
-        Projects
-      </h2>
-
-      <!-- Professional Projects -->
-      <div class="space-y-6">
+  <div class="max-w-[90rem] mx-auto px-6 py-10 lg:flex lg:gap-8">
+    <!-- Sidebar: Tech Stack Radar -->
+    <aside class="hidden lg:block w-56 shrink-0">
+      <div class="sticky top-20 space-y-4">
         <p
-          class="text-sm font-semibold text-white border-b border-[#474747] pb-2"
+          class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold"
         >
-          Professional
+          Stack Overview
         </p>
-        <div
-          v-for="group in professionalProjects"
-          :key="group.category"
-          class="space-y-3"
-        >
-          <p
-            class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold"
+        <div class="space-y-3">
+          <div
+            v-for="group in stack"
+            :key="group.domain"
+            class="rounded-lg border border-[#474747] overflow-hidden"
           >
-            {{ group.category }}
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <div
-              v-for="project in group.items"
-              :key="project.name"
-              class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747] flex flex-col"
+              class="px-3 py-1.5 text-xs font-semibold"
+              :style="{ backgroundColor: group.bg, color: group.color }"
             >
-              <div>
+              {{ group.domain }}
+            </div>
+            <div class="px-3 py-2 space-y-1.5 bg-[#2c2c2c]">
+              <div
+                v-for="item in group.items"
+                :key="item.name"
+                class="flex items-center gap-2"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full shrink-0"
+                  :class="
+                    item.level === 'primary' ? 'bg-white' : 'bg-[#474747]'
+                  "
+                ></span>
+                <span
+                  class="text-xs"
+                  :class="
+                    item.level === 'primary'
+                      ? 'text-[#d1d5db]'
+                      : 'text-[#6b7280]'
+                  "
+                  >{{ item.name }}</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-3 text-[10px] text-[#6b7280]">
+          <span class="flex items-center gap-1"
+            ><span class="w-1.5 h-1.5 rounded-full bg-white inline-block"></span
+            >Currently using</span
+          >
+          <span class="flex items-center gap-1"
+            ><span
+              class="w-1.5 h-1.5 rounded-full bg-[#474747] inline-block"
+            ></span
+            >Used</span
+          >
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="min-w-0 flex-1 space-y-12">
+      <!-- About -->
+      <section class="space-y-4">
+        <h1 class="text-3xl font-bold tracking-tight">Welcome! I'm Fabian.</h1>
+        <p class="text-[#9ca3af]">
+          AI Software Engineer ·
+          <span class="text-white">📍 Barcelona, Spain</span>
+        </p>
+        <p class="leading-relaxed text-[#d1d5db] text-justify">
+          I'm a software engineer specialized in AI and data science currently
+          working as an AI Software Engineer at Factorial, where I design and
+          ship AI-driven systems — from RAG-powered chatbots and LLM
+          micro-services to MLOps pipelines and large-scale data engineering
+          workflows. I hold a Master's Degree in Computer Science from the
+          Polytechnic University of Madrid and a Bachelor's from the University
+          of Salamanca. Before pivoting into applied AI, I built a strong
+          foundation in full-stack web development (React, Vue, Node, Next.js)
+          and quality assurance automation. Outside of work I enjoy game
+          development, DevOps, and picking up new languages — both programming
+          and human ones. 😊
+        </p>
+      </section>
+
+      <hr class="border-[#474747]" />
+
+      <!-- Education -->
+      <section id="education" class="space-y-4">
+        <h2 class="text-xl font-semibold flex items-center gap-3">
+          <span
+            class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
+          ></span>
+          Education
+        </h2>
+        <div class="space-y-3">
+          <div
+            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#9cc2ff]"
+          >
+            <div class="w-32 shrink-0 flex items-center justify-center">
+              <img
+                class="max-w-full max-h-14 object-contain"
+                src="/images/upm_leyenda.png"
+                alt="Polytechnic University of Madrid"
+              />
+            </div>
+            <div>
+              <p class="font-semibold">Master's Degree in Computer Science</p>
+              <p class="text-[#9cc2ff] text-sm mt-0.5">
+                Polytechnic University of Madrid · Spain
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ffa0a0]"
+          >
+            <div class="w-32 shrink-0 flex items-center justify-center">
+              <img
+                class="max-w-full max-h-14 object-contain"
+                src="/images/logo-usal-white.png"
+                alt="University of Salamanca"
+              />
+            </div>
+            <div>
+              <p class="font-semibold">Bachelor's Degree in Computer Science</p>
+              <p class="text-[#ffa0a0] text-sm mt-0.5">
+                University of Salamanca · Spain
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-[#474747]" />
+
+      <!-- Experience -->
+      <section id="experience" class="space-y-4">
+        <h2 class="text-xl font-semibold flex items-center gap-3">
+          <span
+            class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
+          ></span>
+          Work Experience
+        </h2>
+        <div class="space-y-3">
+          <div
+            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ff355e]"
+          >
+            <div class="w-32 shrink-0 flex items-center justify-center">
+              <div
+                class="w-12 h-12 rounded-lg bg-[#1a2e22] flex items-center justify-center text-[#ff355e] font-bold text-lg"
+              >
+                F
+              </div>
+            </div>
+            <div>
+              <p class="font-semibold">AI Software Engineer</p>
+              <p class="text-[#ff355e] text-sm mt-0.5">
+                Factorial · Apr 2025 – Present
+              </p>
+              <p class="text-[#6b7280] text-xs mt-0.5">📍 Barcelona, Spain</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#9cc2ff]"
+          >
+            <div class="w-32 shrink-0 flex items-center justify-center">
+              <div
+                class="w-12 h-12 rounded-lg bg-[#1a2333] flex items-center justify-center text-[#9cc2ff] font-bold text-lg"
+              >
+                I
+              </div>
+            </div>
+            <div>
+              <p class="font-semibold">Software Engineer</p>
+              <p class="text-[#9cc2ff] text-sm mt-0.5">
+                IDENTY Touchless ID · Feb 2024 – Dec 2024
+              </p>
+              <p class="text-[#6b7280] text-xs mt-0.5">📍 Madrid, Spain</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ffd6a5]"
+          >
+            <div class="w-32 shrink-0 flex items-center justify-center">
+              <div
+                class="w-12 h-12 rounded-lg bg-[#2e2214] flex items-center justify-center text-[#ffd6a5] font-bold text-lg"
+              >
+                N
+              </div>
+            </div>
+            <div>
+              <p class="font-semibold">Software QA Engineer</p>
+              <p class="text-[#ffd6a5] text-sm mt-0.5">
+                NTT Data Europe & LATAM · Feb 2022 – Jun 2022
+              </p>
+              <p class="text-[#6b7280] text-xs mt-0.5">📍 Salamanca, Spain</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-5 bg-[#363636] rounded-lg p-4 border-l-4 border-[#ffa0a0]"
+          >
+            <div class="w-32 shrink-0 flex items-center justify-center">
+              <div
+                class="w-12 h-12 rounded-lg bg-[#1e1a2e] flex items-center justify-center text-[#ffa0a0] font-bold text-lg"
+              >
+                B
+              </div>
+            </div>
+            <div>
+              <p class="font-semibold">Software Engineer</p>
+              <p class="text-[#ffa0a0] text-sm mt-0.5">
+                BISITE Research Group · Feb 2021 – Jun 2021
+              </p>
+              <p class="text-[#6b7280] text-xs mt-0.5">📍 Salamanca, Spain</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-[#474747]" />
+
+      <!-- Coursework -->
+      <section class="space-y-3">
+        <h2 class="text-xl font-semibold flex items-center gap-3">
+          <span
+            class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
+          ></span>
+          CS & Engineering Coursework
+        </h2>
+        <div class="rounded-lg border border-[#474747] overflow-hidden">
+          <button
+            @click="isBachelorCoursesVisible = !isBachelorCoursesVisible"
+            class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-[#363636] transition-colors cursor-pointer"
+          >
+            <span class="font-medium">Bachelor's Degree Courses</span>
+            <span class="text-[#9ca3af] text-xs">{{
+              isBachelorCoursesVisible ? "▲ hide" : "▼ show"
+            }}</span>
+          </button>
+          <ul
+            v-if="isBachelorCoursesVisible"
+            class="list-disc px-10 pb-4 pt-2 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
+          >
+            <li>Programming I, II & III</li>
+            <li>Advanced Programming</li>
+            <li>Data Structures and Algorithms I & II</li>
+            <li>Computer Structures I & II</li>
+            <li>Computer Architecture</li>
+            <li>Operating Systems I & II</li>
+            <li>Computer Networks I & II</li>
+            <li>Systems Administration</li>
+            <li>Computer Systems Security</li>
+            <li>Information Theory & Encryption</li>
+            <li>Database Design</li>
+            <li>Database Systems</li>
+            <li>Graphical Interfaces Design</li>
+            <li>Human-Computer Interaction</li>
+            <li>Software Engineering I & II</li>
+            <li>Software Project Management</li>
+            <li>Intelligent Systems</li>
+            <li>Distributed Systems</li>
+            <li>Digital Animation</li>
+            <li>Modeling and Simulation of Systems</li>
+          </ul>
+        </div>
+        <div class="rounded-lg border border-[#474747] overflow-hidden">
+          <button
+            @click="isMasterCoursesVisible = !isMasterCoursesVisible"
+            class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-[#363636] transition-colors cursor-pointer"
+          >
+            <span class="font-medium">Master's Degree Courses</span>
+            <span class="text-[#9ca3af] text-xs">{{
+              isMasterCoursesVisible ? "▲ hide" : "▼ show"
+            }}</span>
+          </button>
+          <ul
+            v-if="isMasterCoursesVisible"
+            class="list-disc px-10 pb-4 pt-2 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
+          >
+            <li>Data Processes</li>
+            <li>Advanced Intelligent Systems</li>
+            <li>Intelligent Data Analysis</li>
+            <li>Interactive Systems</li>
+            <li>Embedded and Ubiquitous Systems</li>
+            <li>Advanced Concepts of Software Engineering</li>
+            <li>Emerging Technologies for Business</li>
+            <li>Strategic Planning</li>
+            <li>Project Management</li>
+            <li>Quality Assurance & Information Security</li>
+            <li>Computer Graphics</li>
+            <li>Design & Security of Computer Networks</li>
+            <li>Advanced Operating Systems</li>
+            <li>Scientific Computing</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="border-[#474747]" />
+
+      <!-- Projects -->
+      <section id="projects" class="space-y-8">
+        <h2 class="text-xl font-semibold flex items-center gap-3">
+          <span
+            class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
+          ></span>
+          Projects
+        </h2>
+
+        <!-- Professional Projects -->
+        <div class="space-y-6">
+          <p
+            class="text-sm font-semibold text-white border-b border-[#474747] pb-2"
+          >
+            Professional
+          </p>
+          <div
+            v-for="group in professionalProjects"
+            :key="group.category"
+            class="space-y-3"
+          >
+            <p
+              class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold"
+            >
+              {{ group.category }}
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div
+                v-for="project in group.items"
+                :key="project.name"
+                class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747] flex flex-col"
+              >
+                <div>
+                  <p class="font-semibold">{{ project.name }}</p>
+                  <p class="text-xs text-[#6b7280] mt-0.5">{{ project.org }}</p>
+                </div>
+                <p class="text-sm text-[#9ca3af] grow">{{ project.desc }}</p>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span v-for="t in project.tech" :key="t" class="tech-badge">{{
+                    t
+                  }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Projects -->
+        <div class="space-y-6">
+          <p
+            class="text-sm font-semibold text-white border-b border-[#474747] pb-2"
+          >
+            Personal
+          </p>
+          <div
+            v-for="group in personalProjects"
+            :key="group.category"
+            class="space-y-3"
+          >
+            <p
+              class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold"
+            >
+              {{ group.category }}
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div
+                v-for="project in group.items"
+                :key="project.name"
+                class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747] flex flex-col"
+              >
                 <p class="font-semibold">{{ project.name }}</p>
-                <p class="text-xs text-[#6b7280] mt-0.5">{{ project.org }}</p>
-              </div>
-              <p class="text-sm text-[#9ca3af] grow">{{ project.desc }}</p>
-              <div class="flex flex-wrap gap-1.5 pt-1">
-                <span v-for="t in project.tech" :key="t" class="tech-badge">{{
-                  t
-                }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Personal Projects -->
-      <div class="space-y-6">
-        <p
-          class="text-sm font-semibold text-white border-b border-[#474747] pb-2"
-        >
-          Personal
-        </p>
-        <div
-          v-for="group in personalProjects"
-          :key="group.category"
-          class="space-y-3"
-        >
-          <p
-            class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold"
-          >
-            {{ group.category }}
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            <div
-              v-for="project in group.items"
-              :key="project.name"
-              class="bg-[#363636] rounded-lg p-4 space-y-2 border border-[#474747] flex flex-col"
-            >
-              <p class="font-semibold">{{ project.name }}</p>
-              <p class="text-sm text-[#9ca3af] grow">{{ project.desc }}</p>
-              <div class="flex flex-wrap gap-1.5 pt-1">
-                <span v-for="t in project.tech" :key="t" class="tech-badge">{{
-                  t
-                }}</span>
+                <p class="text-sm text-[#9ca3af] grow">{{ project.desc }}</p>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span v-for="t in project.tech" :key="t" class="tech-badge">{{
+                    t
+                  }}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <hr class="border-[#474747]" />
+      <hr class="border-[#474747]" />
 
-    <!-- Skills -->
-    <section id="skills" class="space-y-6">
-      <h2 class="text-xl font-semibold flex items-center gap-3">
-        <span
-          class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
-        ></span>
-        Skills
-      </h2>
+      <!-- Skills -->
+      <section id="skills" class="space-y-6">
+        <h2 class="text-xl font-semibold flex items-center gap-3">
+          <span
+            class="w-1 h-5 bg-blue-400 rounded-full inline-block shrink-0"
+          ></span>
+          Skills
+        </h2>
 
-      <div class="space-y-6">
-        <div>
-          <p
-            class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
-          >
-            Programming Languages
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="lang in languages"
-              :key="lang.name"
-              :class="
-                lang.hot
-                  ? 'bg-[#1e3a5f] text-[#9cc2ff] border-[#3b6fa0]'
-                  : 'bg-[#363636] text-[#d1d5db] border-[#474747]'
-              "
-              class="px-3 py-1 rounded-full border text-sm"
+        <div class="space-y-6">
+          <div>
+            <p
+              class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
             >
-              {{ lang.name }}<span v-if="lang.hot" class="ml-1">🔥</span>
-            </span>
+              Programming Languages
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="lang in languages"
+                :key="lang.name"
+                :class="
+                  lang.hot
+                    ? 'bg-[#1e3a5f] text-[#9cc2ff] border-[#3b6fa0]'
+                    : 'bg-[#363636] text-[#d1d5db] border-[#474747]'
+                "
+                class="px-3 py-1 rounded-full border text-sm"
+              >
+                {{ lang.name }}<span v-if="lang.hot" class="ml-1">🔥</span>
+              </span>
+            </div>
           </div>
-        </div>
 
-        <div>
-          <p
-            class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
-          >
-            Tools & Software
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="tool in tools"
-              :key="tool.name"
-              :class="
-                tool.hot
-                  ? 'bg-[#1e3a5f] text-[#9cc2ff] border-[#3b6fa0]'
-                  : 'bg-[#363636] text-[#d1d5db] border-[#474747]'
-              "
-              class="px-3 py-1 rounded-full border text-sm"
+          <div>
+            <p
+              class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
             >
-              {{ tool.name }}<span v-if="tool.hot" class="ml-1">🔥</span>
-            </span>
+              Tools & Software
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="tool in tools"
+                :key="tool.name"
+                :class="
+                  tool.hot
+                    ? 'bg-[#1e3a5f] text-[#9cc2ff] border-[#3b6fa0]'
+                    : 'bg-[#363636] text-[#d1d5db] border-[#474747]'
+                "
+                class="px-3 py-1 rounded-full border text-sm"
+              >
+                {{ tool.name }}<span v-if="tool.hot" class="ml-1">🔥</span>
+              </span>
+            </div>
           </div>
-        </div>
 
-        <div>
-          <p
-            class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
-          >
-            Languages
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-badge">Spanish — Native</span>
-            <span class="skill-badge">French — Fluent (C1)</span>
-            <span class="skill-badge">English — Fluent (C1)</span>
-            <span class="skill-badge">Portuguese — Intermediate (B1)</span>
-            <span class="skill-badge">Catalan — Intermediate (B1)</span>
+          <div>
+            <p
+              class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
+            >
+              Languages
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-badge">Spanish — Native</span>
+              <span class="skill-badge">French — Fluent (C1)</span>
+              <span class="skill-badge">English — Fluent (C1)</span>
+              <span class="skill-badge">Portuguese — Intermediate (B1)</span>
+              <span class="skill-badge">Catalan — Intermediate (B1)</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+  </div>
 
   <footer class="border-t border-[#474747] mt-12">
     <div
