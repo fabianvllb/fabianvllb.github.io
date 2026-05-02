@@ -1,0 +1,83 @@
+Fabian Villalobos
+
+Software Engineer @ Factorial
+
+Barcelona, Cataluña, España
+
+·
+
+Factorial
+
+Universidad Politécnica de Madrid
+
+Experiencia
+Logotipo de Factorial
+
+AI Software Engineer
+
+Factorial · Jornada completa
+
+abr. 2025 - actualidad · 1 año 2 meses
+
+Barcelona, Spain · Híbrido
+
+Hybrid role with a mix of backend, applied AI, and MLOps, where I analyzed requirements, designed, developed, and deployed AI-driven systems and applications to optimize and automate revenue operations. 
+
+
+Key Projects: 
+
+AI-chatbot: Built intelligent AI powered chatbot along with its retrieval-augmented generation (RAG) system. This included the development of ingestion pipelines, filtering, data transformations, etc.
+
+AI micro-services: Created intelligent AI micro-services for data summarization and generation.
+Projects accompanied with their CI/CD pipelines, app/service metrics data capture, and metrics data visualization dashboards.
+
+Data Engineering: Performed large-scale data cleaning, processing, and restoration, ensuring data quality and consistency across systems. 
+
+Automation & Integration: Designed and implemented complex workflow automations, custom automation scripts, and custom integrations, to synchronize data between storage systems and external services 
+
+Tech stack: Python, AWS, Azure, LanchChain, ElasticSearch (ELK stack), Docker, Git, Slack API, HubSpot API, SQL, Terraform.
+Logotipo de IDENTY Touchless ID
+
+Software Engineer
+
+IDENTY Touchless ID · Contrato de prácticas
+
+feb. 2024 - dic. 2024 · 11 meses
+
+Madrid, Spain · Híbrido
+
+Research and Development (CNNs): Designed a system to evaluate facial recognition models using cutting-edge scientific advances in Model Explainability (XAI) techniques for Convolutional Neural Networks models. Successfully identified biases and undesired learning patterns during the training process through Python-based analysis (TensorFlow, Pandas).
+
+Technical Publication: Authored a scientific whitepaper detailing the comparative results of XAI techniques, providing the company with a strategic roadmap for bias mitigation.
+
+SDK Quality Assurance: Developed 200+ automated tests for proprietary web SDKs using JavaScript and TypeScript. Streamlined deployment by configuring CI/CD pipelines with Docker and Bitbucket.
+
+ Java, Docker y 9 aptitudes más
+Logotipo de NTT Data Europe & LATAM
+
+Software QA Engineer
+
+NTT Data Europe & LATAM · Contrato de prácticas
+
+feb. 2022 - jun. 2022 · 5 meses
+
+Salamanca, Castilla y León, Spain
+
+Worked on web test automation for major telecom clients, Orange and Vodafone, using Java, Selenium WebDriver, HTML, and CSS.
+Developed 100+ unit tests, ensuring proper data transfer, UI rendering, and navigation functionality for both websites, integrating backend APIs.
+Gained experience in project management and software optimization, utilizing tools such as Jenkins, Confluence, and Jira.
+
+ Herramientas de automatización de pruebas, Resolución de problemas y 1 aptitud más
+Logotipo de BISITE Research Group
+
+Software Engineer
+
+BISITE Research Group · Contrato de prácticas
+
+feb. 2021 - jun. 2021 · 5 meses
+
+Salamanca, Castilla y Leon, Spain
+
+I was given the opportunity to develop an entire web application from the ground up, to be used by the public transportation of the city of Salamanca to find the shortest routes between any two locations in the city. Technologies used were React, JavaScript, Node, Express, MongoDB and PostgreSQL.
+
+ Figma, Sistemas de bases de datos y 10 aptitudes más
