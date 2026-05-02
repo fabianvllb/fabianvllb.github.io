@@ -62,7 +62,10 @@ const stack = [
       { name: "Express", level: "primary" },
       { name: "Go", level: "secondary" },
       { name: "Java", level: "secondary" },
-      { name: "SQL", level: "primary" },
+      { name: "PostgreSQL", level: "primary" },
+      { name: "Redis", level: "primary" },
+      { name: "MySQL", level: "secondary" },
+      { name: "MongoDB", level: "secondary" },
     ],
   },
   {
@@ -374,31 +377,62 @@ const personalProjects = [
             </button>
             <div
               v-if="isMasterCoursesVisible"
-              class="border-t border-[#474747] px-6 pb-4 pt-3"
+              class="border-t border-[#474747] px-6 pb-4 pt-3 space-y-4"
             >
-              <p
-                class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-3"
-              >
-                Coursework
-              </p>
-              <ul
-                class="list-disc pl-5 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
-              >
-                <li>Data Processes</li>
-                <li>Advanced Intelligent Systems</li>
-                <li>Intelligent Data Analysis</li>
-                <li>Interactive Systems</li>
-                <li>Embedded and Ubiquitous Systems</li>
-                <li>Advanced Concepts of Software Engineering</li>
-                <li>Emerging Technologies for Business</li>
-                <li>Strategic Planning</li>
-                <li>Project Management</li>
-                <li>Quality Assurance & Information Security</li>
-                <li>Computer Graphics</li>
-                <li>Design & Security of Computer Networks</li>
-                <li>Advanced Operating Systems</li>
-                <li>Scientific Computing</li>
-              </ul>
+              <div>
+                <p
+                  class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-2"
+                >
+                  1st Semester
+                </p>
+                <ul
+                  class="list-disc pl-5 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
+                >
+                  <li>Emerging Technologies for Business</li>
+                  <li>Intelligent Systems</li>
+                  <li>Intelligent Data Analysis</li>
+                  <li>Interactive Systems</li>
+                  <li>Embedded and Ubiquitous Systems</li>
+                  <li>Data Processes</li>
+                </ul>
+              </div>
+              <div>
+                <p
+                  class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-2"
+                >
+                  2nd Semester
+                </p>
+                <ul
+                  class="list-disc pl-5 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
+                >
+                  <li>Advanced Concepts of Software Engineering</li>
+                  <li>Strategic Planning</li>
+                  <li>Project Management</li>
+                  <li>Computer Graphics</li>
+                  <li>Quality Assurance & Information Security</li>
+                  <li>Design & Security of Computer Networks</li>
+                  <li>Advanced Operating Systems</li>
+                  <li>Scientific Computing</li>
+                </ul>
+              </div>
+              <div>
+                <p
+                  class="text-xs text-[#9ca3af] uppercase tracking-widest font-semibold mb-2"
+                >
+                  3rd Semester
+                </p>
+                <ul
+                  class="list-disc pl-5 columns-2 gap-x-8 text-sm text-[#d1d5db] space-y-1"
+                >
+                  <li>Big Data</li>
+                  <li>Data Visualization</li>
+                  <li>Mobile Application Development</li>
+                  <li>Design of Cloud Computing and Big Data Ecosystems</li>
+                  <li>Robotics</li>
+                  <li>Accessible Design and Assistive Products</li>
+                  <li>Real-Time Distributed Application Development</li>
+                </ul>
+              </div>
             </div>
           </div>
           <!-- Bachelor's -->
